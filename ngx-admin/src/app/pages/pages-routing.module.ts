@@ -49,9 +49,6 @@ const routes: Routes = [{
     path: 'miscellaneous',
     loadChildren: './miscellaneous/miscellaneous.module#MiscellaneousModule',
   }, {
-    path: 'products',
-    loadChildren: './miscellaneous/miscellaneous.module#MiscellaneousModule',
-  }, {
     path: '',
     redirectTo: 'iot-dashboard',
     pathMatch: 'full',
@@ -65,11 +62,14 @@ const routes: Routes = [{
     path: 'orders/add-new',
     component: OrdersComponent
   }, {
-    path: 'products',
-    component: ProductsComponent
-  }, {
-    path: 'product/add-new',
-    component: AddNewProductComponent
+    path: 'product',
+    component: ProductsComponent,
+    children: [
+      {
+        path: '/add-new',
+        component: AddNewProductComponent
+      },
+    ]
   }, {
     path: 'order-detail',
     component: OrdersDetailComponent

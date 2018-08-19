@@ -1,12 +1,12 @@
 export class Product {
-    id_ad_user: Number; 
-	username:String;
-	password: String;
-	fullname: String;
-	email: String; 
-	address: String;  
-	phone_number: String;
-	role: String; 
-	created_at :Date;
-	updated_at: Date;
+	id: Number;
+	idCategory: Number;
+	name: String;
+	price: Number;
+	status: Number;
+	promotion: String;
+	tag: String;
+	details: String;
+	description: String;
+	content: String;
 }
